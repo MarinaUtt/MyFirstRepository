@@ -21,6 +21,7 @@ body{
 
 .container{
   max-width: 1200px;
+  padding: 0 30px;
   margin: 0 auto;
 }
 
@@ -36,6 +37,7 @@ body{
   font-size: 30px;
   font-weight: 400;
   margin-left: 100px;
+  white-space: nowrap;
 }
 
 .label::before {
@@ -65,6 +67,7 @@ body{
   font-size: 21px;
   font-weight: 700;
   margin-left: 70px;
+  white-space: nowrap;
 }
 
 .main-whatsapp::before {
@@ -76,3 +79,130 @@ body{
   content: '';
   background: url(src/image/whatsapp.svg) no-repeat center / contain;
 }
+
+.burger-menu{
+  display: none;
+}
+
+
+@media (max-width: 950px){
+
+  /*.main{
+    display: none;
+  }*/
+
+  .burger-menu{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: 30px;
+    margin-left: 30px;
+  }
+
+  .burger-menu span{
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #000000; 
+  }
+
+  .burger-menu::after,.burger-menu::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #000000;  
+  }
+
+  .burger-menu::after{
+    top: 0;
+  }
+
+  .burger-menu::before{
+    bottom: 0;
+  }
+
+  .burger-menu.open span{
+    display: none;
+  }
+
+  .burger-menu.open::after{
+    top:13px;
+    transform: rotate(45deg);
+  }
+
+  .burger-menu.open::before{
+    bottom: 13px;
+    transform: rotate(-45deg);
+  }
+  
+ 
+  .main-list{
+    flex-direction: column;
+    justify-content: start;
+    width: 100vw;   
+    height: 100vh;
+    background: #80E9F0;
+    position: absolute;
+    top: -100vh;
+    left: 0;
+    padding: 75px 0 0 25px;
+    transition: top 0.5s ease;
+ }
+
+
+  .main-link{
+    font-size: 28px;
+  }
+
+  .main-item{
+    padding-bottom: 10px;
+  }
+  
+  .main-list-open{
+    top:0
+  }
+
+  .disabled-scroll{
+    overflow: hidden;
+}
+
+@media (max-width: 800px){
+  .main-whatsapp{
+    font-size: 12px;
+  }
+  .main-whatsapp::before {
+    width: 35px;
+    height: 35px; 
+    left: -40px;
+    top: -15px;
+  }
+}
+
+@media (max-width: 800px){
+  .main-whatsapp{
+    display: none;
+  }
+  
+}
+
+@media (max-width: 425px){
+  .label{
+    font-size: 20px;
+  }
+  
+  .label::before {
+    width: 60px;
+    left:-70px;
+  }
+
+  .container{
+    padding: 0 10px;
+  }
+
+  .header-container{
+    margin-top: 35px;
+  }
+}
+
