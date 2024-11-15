@@ -88,6 +88,10 @@ body{
   display: none;
 }
 
+.first-page{
+  height: 100vh;
+}
+
 .first-page-info{
   width: 377px;
 }
@@ -147,6 +151,41 @@ h1{
   height: 568px;
 }
 
+h2{
+  font-size: 28px;
+  font-weight: 700;
+}
+
+h3{
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.products-page-subtitle{
+  padding: 35px 0 20px 0;
+}
+
+.products-page-info{
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 64px;
+}
+
+p{
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.products-page-certificates{
+ padding: 108px 0 85px 0;
+}
+
+.funke{
+  display: flex;
+  width: 1186px;
+  gap: 18px;
+}
 
 @media (max-width: 950px){
   .burger-menu{
