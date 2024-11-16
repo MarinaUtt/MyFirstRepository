@@ -11,7 +11,7 @@ let mainItems = document.querySelectorAll('.main-item')
 
 mainItems.forEach((mainItem) => {
   mainItem.addEventListener('click', function() {
-    mainList.classList.remove('active')
+    mainList.classList.remove('main-list-open')
     burgerMenu.classList.remove('open')
     document.body.classList.remove('disabled-scroll')
   })

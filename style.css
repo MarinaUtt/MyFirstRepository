@@ -36,6 +36,11 @@ body{
   background: linear-gradient(180deg, #80E9F0 0%, rgba(154, 194, 224, 0.625) 46.88%, rgba(196, 196, 196, 0) 100%, rgba(145, 170, 206, 0) 100%);
 }
 
+.fon-last{
+  background: linear-gradient(0deg, #80E9F0 0%, rgba(154, 194, 224, 0.625) 46.88%, rgba(196, 196, 196, 0) 100%, rgba(145, 170, 206, 0) 100%);
+
+}
+
 .label{
   position: relative;
   font-size: 30px;
@@ -105,6 +110,7 @@ h1{
 .first-page-container{
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap-reverse;
 }
 
 .first-page-text{
@@ -169,6 +175,7 @@ h3{
   display: flex;
   justify-content: space-between;
   align-items: start;
+  flex-wrap: wrap;
   gap: 64px;
 }
 
@@ -187,7 +194,162 @@ p{
   gap: 18px;
 }
 
+.contacts-block{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 78px;
+}
+
+.contacts-block-list{
+  font-size: 21px;
+  font-weight: 700;
+  padding:49px 0 23px 0;
+  position: relative;
+  margin-left: 80px;;
+}
+
+.contacts-block-item{
+  position: relative;
+  font-size: 17px;
+  font-weight: 700;
+  margin-top: 20px;
+  list-style: none;
+}
+
+.contacts-block-list::before{
+  position: absolute;
+  content: '';
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  top: 15px;
+  left: -70px;
+ /* transform: translate(0, 40%);*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.contacts-block-list:first-child::before{
+  content: '1';
+  background-color:#D2A0CD;
+}
+
+.contacts-block-list:nth-child(2)::before{
+  content: '2';
+  background-color:#E576DA;
+
+}
+
+.contacts-block-list:last-child::before{
+  content: '3';
+  background-color: #F120DC;
+}
+
+.whatsapp-item::before{
+  position: absolute;
+  content: '';
+  width: 38px;
+  height: 38px;
+  top: -15px;
+  left: -44px;
+  background: url(src/image/whatsapp.svg) no-repeat center / contain;
+}
+
+.inst-item::before{
+  position: absolute;
+  content: '';
+  width: 38px;
+  height: 38px;
+  top: -15px;
+  left: -44px;
+  background: url(src/image/inst.svg) no-repeat center / contain;
+}
+
+.fon-item::before{
+  position: absolute;
+  content: '';
+  width: 30px;
+  height: 30px;
+  top: -10px;
+  left: -40px;
+  background: url(src/image/fon.svg) no-repeat center / contain;
+}
+
+.info-item::before{
+  position: absolute;
+  content: '';
+  width: 32px;
+  height: 32px;
+  top: -10px;
+  left: -40px;
+  background: url(src/image/check-mark.svg) no-repeat center / contain;
+}
+
+.info-underitem{
+  list-style: disc inside;
+  font-size: 17px;
+  font-weight: 400;
+  padding-left: 15px;
+}
+
+.feetback-form{
+  padding:26px 0 160px 0;
+  display: flex;
+  justify-content: left;
+}
+
+
+.input{
+  width: 289px;
+  height: 58px;
+  border: 1px solid #000000;
+  margin-right: 40px;
+}
+
+.button-feetback{
+  width: 196px;
+  height: 58px;
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  background-color:#DD3CCD;
+}
+
+.footer{
+  height: 96px;
+  background: #3D3D3D;
+}
+
+.footer-container{
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-text{
+  font-size: 17px;
+  font-weight: 400px;
+  color: white;
+}
+
+.link{
+  color: #000000;
+}
+
 @media (max-width: 950px){
+  .first-page{
+    height: auto;
+  }
+
+  .first-page-button{
+    margin-bottom: 50px;
+  }
   .burger-menu{
     position: relative;
     display: flex;
@@ -234,8 +396,7 @@ p{
     bottom: 13px;
     transform: rotate(-45deg);
   }
-  
- 
+   
   .main-list{
     flex-direction: column;
     justify-content: start;
@@ -249,7 +410,6 @@ p{
     transition: top 0.5s ease;
     z-index: 2;
  }
-
 
   .main-link{
     font-size: 28px;
@@ -266,6 +426,10 @@ p{
   .disabled-scroll{
     overflow: hidden;
   }
+
+  .first-page-img{
+    margin-bottom: 50px;
+  }
 }
 
 @media (max-width: 800px){
@@ -280,11 +444,32 @@ p{
   }
 }
 
+@media (max-width: 900px){
+  .feetback-form{
+    flex-direction: column;
+  }
+  .input{
+    margin-bottom: 20px;
+  }
+}
+
 @media (max-width: 800px){
   .main-whatsapp{
     display: none;
   }
   
+}
+
+@media (max-width: 570px){
+  .sky-img{
+    width: 200px;
+    height: 206px;
+    object-fit: cover;
+  } 
+  .win-img{
+    width: 220px;
+    height: auto;
+  }
 }
 
 @media (max-width: 425px){

@@ -16,9 +16,9 @@
       <div class="label">МИР ОКОН</div>
       <div class="main">
         <ul class="main-list">
-          <li class="main-item"><a class="main-link" href="">Главная</a></li>
-          <li class="main-item"><a class="main-link" href="">Продукция</a></li>
-          <li class="main-item"><a class="main-link" href="">Контакты</a></li>
+          <li class="main-item"><a class="main-link" href="#about-page">Главная</a></li>
+          <li class="main-item"><a class="main-link" href="#products-page">Продукция</a></li>
+          <li class="main-item"><a class="main-link" href="#contacts-page">Контакты</a></li>
         </ul>
       </div>
       <div class="main-whatsapp">+7 771 527 14 58</div>
@@ -26,12 +26,11 @@
         <span></span>
       </div>
     </div>
-    <script src="script.js"></script>
   </header>
   <main>
     <section class="first-page">
       <div class="container first-page-container">
-        <div class="first-page-info">
+        <div id="about-page" class="first-page-info">
           <h1>Пластиковые окона и двери в Караганде</h1>
           <div class="first-page-text">
             <ul class="first-page-list">Можем изготовить под заказ:
@@ -43,7 +42,7 @@
               <li class="first-page-item">Подоконники</li>
             </ul>
           </div>
-          <button class="first-page-button">Сделать заказ</button>
+          <a href="#feetback-block"><button class="first-page-button">Сделать заказ</button></a>
         </div>
         <div class="first-page-img">
           <img class="sky-img" src="src/image/sky.jpg" alt="sky">
@@ -53,7 +52,7 @@
     </section>
     </div>
     <div class="fon-center">
-    <section class="products-page">
+    <section id="products-page" class="products-page">
       <div class="container">
         <h2 class="products-page-title">Наша продукция</h2>
         <h3 class="products-page-subtitle">Пластиковые окна и двери разных размеров и модификаций</h3>
@@ -89,6 +88,51 @@
       </div>
     </section>
     </div>
+    <div class="fon-last">
+    <section id="contacts-page" class="contacts-page">
+      <div class="container">
+        <h2>Сделать заказ</h2>
+        <div class="contacts-block">
+          <ul class="contacts-block-list messenger-list">Связаться с нами
+            <a target="_blank" href="https://wa.me/+77715271458?" class="link"><li class="contacts-block-item whatsapp-item">+7 771 527 14 58</li></a>
+            <a target="_blank" href="https://www.instagram.com/okno0811" class="link"><li class="contacts-block-item inst-item">@okno0811</li></a>
+            <a href="#feetback-block" class="link"><li class="contacts-block-item fon-item">Оставить свой номер</li></a> 
+          </ul>
+          <ul class="contacts-block-list info-list">Предоставить информацию
+            <li class="contacts-block-item info-item">Предоставить размеры</li>
+            <li class="contacts-block-item info-item">Выбрать комплектующие: 
+              <ul class="info-underitems">
+                <li class="info-underitem">Откосы</li>
+                <li class="info-underitem">Сливы</li>
+                <li class="info-underitem">Подоконники</li>
+                <li class="info-underitem">Москитная сетка</li>
+              </ul>
+            </li>
+          </ul> 
+          <ul class="contacts-block-list info-list">Оформление заказа
+            <li class="contacts-block-item info-item">Соглосование цен и сроков</li> 
+            <li class="contacts-block-item info-item">Предоплата</li> 
+            <li class="contacts-block-item info-item">Изготовление</li> 
+        </div>
+        <div id="feetback-block"class="feetback-block">
+          <h3>Форма для обратной связи</h3>
+          <form class="feetback-form">
+            <input class="input" type="text">
+            <input class="input" type="text">
+            <input class="button-feetback" type="submit">
+          </form>
+        </div>
+      </div>
+      </section>
+    </div>
   </main>
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-text">© 2021</div>
+      <div class="footer-text">г. Караганда, Казахстан</div>
+      <div class="footer-text">МирОкон</div>
+    </div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
