@@ -342,6 +342,40 @@ p{
   color: #000000;
 }
 
+.first-page-button:hover{
+  animation: buttonAnimate 0.7s infinite ease-in alternate;
+  transform: scale(1.1);
+}
+
+@keyframes buttonAnimate{
+  0%{
+    background: linear-gradient(90deg, #e6325f 0%, rgba(221, 155, 218, 0.811) 58.07%, rgba(254, 203, 157, 0.34) 98.67%);
+  }
+  100%{
+    background: linear-gradient(270deg, #e6325f 0%, rgba(221, 155, 218, 0.811) 58.07%, rgba(254, 203, 157, 0.34) 98.67%);
+  }
+}
+
+.main-link:hover{
+  font-weight: 500;
+}
+
+.link-wa:hover{
+  transform: scale(1.1);
+}
+
+.button-feetback:hover{
+  transform: scale(1.1);
+}
+
+.contacts-item:hover{
+  color: #3D3D3D;
+}
+
+.input:focus{
+  background-color: #dccce0 ;
+}
+
 @media (max-width: 950px){
   .first-page{
     height: auto;
